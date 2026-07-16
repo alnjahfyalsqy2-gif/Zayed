@@ -121,8 +121,17 @@ padding:20px;
 ابدأ الآن
 </a>
 
-<a class="contact-btn" href="https://wa.me>"0935223474" target="_blank">
-تواصل معنا
+<div class="buttons">
+
+<a class="main-btn" href="about.html">
+ابدأ الآن
+</a>
+
+<a class="contact-btn" href="https://www.tiktok.com/@na356542" target="_blank">
+تيك توك
+</a>
+
+</div>
 </a>
 
 </div>
