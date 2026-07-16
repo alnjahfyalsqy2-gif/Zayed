@@ -58,100 +58,82 @@ margin-bottom:15px;
 
 .hero p{
 font-size:20px;
-max-width:650px;
-line-height:1.8;
+margin-bottom:25px;
 }
 
-.btn{
-margin-top:30px;
-padding:15px 35px;
-background:#ffd700;
-color:black;
+.buttons a{
+display:inline-block;
+padding:12px 30px;
+margin:10px;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
-border-radius:50px;
 transition:.3s;
 }
 
-.btn:hover{
-transform:scale(1.08);
+.main-btn{
+background:#ffd700;
+color:#0f172a;
 }
 
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-padding:60px 20px;
-}
-
-.card{
+.contact-btn{
 background:white;
-color:black;
-width:260px;
-padding:25px;
-border-radius:15px;
-text-align:center;
-transition:.4s;
+color:#2563eb;
 }
 
-.card:hover{
-transform:translateY(-10px);
+.buttons a:hover{
+transform:translateY(-5px) scale(1.05);
 }
 
 footer{
-padding:30px;
 text-align:center;
-opacity:.8;
+padding:20px;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-<div class="logo">🚀 النجاح</div>
+<div class="logo">موقعي</div>
 
 <nav>
 <a href="#">الرئيسية</a>
-<a href="#">الخدمات</a>
-<a href="#">الأعمال</a>
-<a href="#">تواصل</a>
+<a href="#about">عن الموقع</a>
+<a href="#contact">تواصل</a>
 </nav>
+
 </header>
 
+
 <section class="hero">
-<h1>اصنع مستقبلك مع البرمجة</h1>
+
+<h1>أهلاً بك في موقعي</h1>
 
 <p>
-تعلم تطوير المواقع والتطبيقات وابدأ ببناء مشاريع احترافية وتحقيق دخل من الإنترنت.
+هنا أقدم خدماتي وأعمالي بطريقة حديثة
 </p>
 
-<a class="btn" href="#">ابدأ الآن</a>
-</section>
+<div class="buttons">
 
-<section class="cards">
+<a class="main-btn" href="#about">
+ابدأ الآن
+</a>
 
-<div class="card">
-<h2>سرعة</h2>
-<p>تصميم سريع وحديث.</p>
-</div>
+<a class="contact-btn" href="https://wa.me/ضع_رقمك_هنا" target="_blank">
+تواصل معنا
+</a>
 
-<div class="card">
-<h2>احترافية</h2>
-<p>واجهة جميلة ومتجاوبة.</p>
-</div>
-
-<div class="card">
-<h2>سهولة</h2>
-<p>يعمل على الهاتف والكمبيوتر.</p>
 </div>
 
 </section>
+
 
 <footer>
 © 2026 جميع الحقوق محفوظة
 </footer>
+
 
 </body>
 </html>
