@@ -36,6 +36,7 @@ font-weight:bold;
 }
 
 
+
 nav a{
 color:white;
 text-decoration:none;
@@ -51,6 +52,7 @@ color:#ffd700;
 
 
 .hero{
+
 height:85vh;
 display:flex;
 flex-direction:column;
@@ -58,59 +60,49 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+
 }
 
 
 
 .hero h1{
+
 font-size:45px;
-margin-bottom:15px;
+margin-bottom:20px;
+
 }
 
 
 
 .hero p{
+
 font-size:20px;
-margin-bottom:25px;
+max-width:600px;
+line-height:1.8;
+
 }
 
 
 
-.buttons a{
-display:inline-block;
-padding:12px 30px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
+.card{
 
+margin-top:30px;
+background:rgba(255,255,255,0.1);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+width:90%;
+max-width:500px;
 
-
-.main-btn{
-background:#ffd700;
-color:#0f172a;
-}
-
-
-
-.contact-btn{
-background:white;
-color:#2563eb;
-}
-
-
-
-.buttons a:hover{
-transform:translateY(-5px) scale(1.05);
 }
 
 
 
 footer{
+
 text-align:center;
 padding:20px;
+
 }
 
 </style>
@@ -134,12 +126,12 @@ padding:20px;
 الرئيسية
 </a>
 
-<a href="about.html">
-عن الموقع
+<a href="#">
+الخدمات
 </a>
 
-<a href="https://www.tiktok.com/@na356542" target="_blank">
-تيك توك
+<a href="#">
+حولنا
 </a>
 
 </nav>
@@ -157,23 +149,19 @@ padding:20px;
 
 
 <p>
-هنا أقدم خدماتي وأعمالي بطريقة حديثة
+موقع حديث بتصميم بسيط وسريع يمكن تطويره وتحويله إلى تطبيق هاتف.
 </p>
 
 
+<div class="card">
 
-<div class="buttons">
+<h2>
+مشروعي
+</h2>
 
-
-<a class="main-btn" href="about.html">
-ابدأ الآن
-</a>
-
-
-<a class="contact-btn" href="https://www.tiktok.com/@na356542" target="_blank">
-تابعنا على تيك توك
-</a>
-
+<p>
+هنا يمكنك وضع وصف التطبيق أو الخدمات التي تقدمها.
+</p>
 
 </div>
 
