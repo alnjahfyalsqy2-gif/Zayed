@@ -121,7 +121,7 @@ padding:20px;
 ابدأ الآن
 </a>
 
-<a class="contact-btn" href="https://wa.me/ضع_رقمك_هنا" target="_blank">
+<a class="contact-btn" href="https://wa.me>"0935223474" target="_blank">
 تواصل معنا
 </a>
 
