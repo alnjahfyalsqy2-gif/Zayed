@@ -8,7 +8,6 @@
 
 <title>تطبيقي</title>
 
-
 <style>
 
 *{
@@ -20,10 +19,21 @@ font-family:Arial,sans-serif;
 
 
 body{
-
 background:#2563eb;
 color:white;
 min-height:100vh;
+display:flex;
+justify-content:center;
+}
+
+
+
+.app{
+
+width:100%;
+max-width:500px;
+min-height:100vh;
+overflow:hidden;
 
 }
 
@@ -31,8 +41,8 @@ min-height:100vh;
 
 header{
 
-padding:25px;
 text-align:center;
+padding:25px;
 
 }
 
@@ -40,7 +50,7 @@ text-align:center;
 
 .logo{
 
-font-size:35px;
+font-size:32px;
 font-weight:bold;
 
 }
@@ -49,13 +59,8 @@ font-weight:bold;
 
 .container{
 
-height:75vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
 padding:20px;
+text-align:center;
 
 }
 
@@ -63,16 +68,17 @@ padding:20px;
 
 h1{
 
-font-size:45px;
+font-size:38px;
+margin-top:70px;
 margin-bottom:20px;
 
 }
 
 
 
-p{
+.description{
 
-font-size:20px;
+font-size:18px;
 line-height:1.8;
 
 }
@@ -81,25 +87,23 @@ line-height:1.8;
 
 .time{
 
-margin-top:25px;
+margin:30px auto;
 background:rgba(255,255,255,0.15);
-padding:15px 30px;
+padding:15px;
 border-radius:20px;
-font-size:18px;
+width:90%;
 
 }
 
 
 
-.box{
+.card{
 
-margin-top:30px;
 background:white;
 color:#2563eb;
 padding:25px;
-border-radius:20px;
-width:90%;
-max-width:450px;
+border-radius:25px;
+margin-top:25px;
 
 }
 
@@ -107,30 +111,30 @@ max-width:450px;
 
 button{
 
-margin:10px;
-padding:12px 25px;
 border:none;
-border-radius:25px;
-cursor:pointer;
+padding:13px 25px;
+border-radius:30px;
+margin-top:20px;
 font-size:16px;
 font-weight:bold;
+cursor:pointer;
 
 }
 
 
 
-.lang{
+.download{
+
+background:#2563eb;
+color:white;
+
+}
+
+
+
+.language{
 
 background:#ffd700;
-
-}
-
-
-
-.app{
-
-background:white;
-color:#2563eb;
 
 }
 
@@ -140,6 +144,7 @@ footer{
 
 text-align:center;
 padding:20px;
+font-size:14px;
 
 }
 
@@ -147,115 +152,102 @@ padding:20px;
 
 </style>
 
-
 </head>
 
 
 <body>
 
 
+<div class="app">
+
+
 
 <header>
 
-<div class="logo" id="title">
-
+<div class="logo">
 تطبيقي
-
 </div>
 
 </header>
 
 
 
-
 <div class="container">
 
 
+
 <h1 id="welcome">
-
 أهلاً بك في موقعي
-
 </h1>
 
 
-<p id="description">
-
+<p class="description" id="desc">
 تطبيق حديث وسهل الاستخدام يقدم تجربة مميزة للمستخدم.
-
 </p>
 
 
 
 <div class="time">
 
-<span id="date"></span>
+<div id="date"></div>
 
-<br>
-
-<span id="clock"></span>
+<div id="clock"></div>
 
 </div>
 
 
 
 
-<div class="box">
+<div class="card">
 
 
-<h2 id="boxTitle">
-
+<h2 id="title">
 تحميل التطبيق
-
 </h2>
 
 
-<p id="boxText">
-
-ضع رابط تطبيقك هنا لاحقاً
-
+<p id="text">
+يمكنك إضافة رابط التطبيق هنا لاحقاً.
 </p>
 
 
 
-<button class="app" onclick="openApp()">
-
+<button class="download" onclick="downloadApp()" id="download">
 رابط التطبيق
-
 </button>
 
 
 <br>
 
 
-<button class="lang" onclick="changeLanguage()">
-
+<button class="language" onclick="changeLang()" id="lang">
 English
-
 </button>
 
 
-</div>
-
 
 </div>
 
+
+
+</div>
 
 
 
 <footer>
-
 © 2026
-
 </footer>
 
 
+
+</div>
 
 
 
 <script>
 
 
-let arabic=true;
+let english=false;
 
 
 
@@ -263,17 +255,13 @@ function updateTime(){
 
 let now=new Date();
 
-
-document.getElementById("date").innerHTML =
+document.getElementById("date").innerHTML=
 now.toLocaleDateString();
 
-
-document.getElementById("clock").innerHTML =
+document.getElementById("clock").innerHTML=
 now.toLocaleTimeString();
 
-
 }
-
 
 
 setInterval(updateTime,1000);
@@ -283,17 +271,13 @@ updateTime();
 
 
 
+function downloadApp(){
 
+let link="";
 
-function openApp(){
+if(link){
 
-// ضع رابط تطبيقك هنا لاحقاً
-
-let appLink="";
-
-if(appLink!=""){
-
-window.open(appLink,"_blank");
+window.open(link);
 
 }else{
 
@@ -306,17 +290,13 @@ alert("لم يتم إضافة رابط التطبيق بعد");
 
 
 
+function changeLang(){
 
 
-
-function changeLanguage(){
-
-
-if(arabic){
+if(!english){
 
 
 document.documentElement.lang="en";
-
 document.documentElement.dir="ltr";
 
 
@@ -324,29 +304,27 @@ document.getElementById("welcome").innerHTML=
 "Welcome to my website";
 
 
-document.getElementById("description").innerHTML=
+document.getElementById("desc").innerHTML=
 "A modern and easy application experience.";
 
 
-document.getElementById("boxTitle").innerHTML=
+document.getElementById("title").innerHTML=
 "Download App";
 
 
-document.getElementById("boxText").innerHTML=
-"Add your app link here later";
+document.getElementById("text").innerHTML=
+"You can add your app link here later.";
 
 
-document.querySelector(".app").innerHTML=
+document.getElementById("download").innerHTML=
 "App Link";
 
 
-document.querySelector(".lang").innerHTML=
+document.getElementById("lang").innerHTML=
 "العربية";
 
 
-
-arabic=false;
-
+english=true;
 
 
 }else{
@@ -358,13 +336,10 @@ location.reload();
 }
 
 
-
 }
 
 
-
 </script>
-
 
 
 </body>
